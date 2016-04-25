@@ -1,0 +1,9 @@
+<script>
+var hmgApp = angular.module('hmg', []);
+
+hmgApp.controller('hmgController', function ($scope, $http) {
+    $http.get('http://localhost:8080/api/content/articles?$limit=25&$offset=0&$order=publish_date=0&render=1').success(function(data) {
+        $scope.arr = data.data;
+    });
+});
+</script>

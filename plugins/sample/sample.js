@@ -1,7 +1,7 @@
 
 
 module.exports = function SamplePluginModule(pb) {
-    
+
     /**
      * SamplePlugin - A sample for exemplifying what the main module file should
      * look like.

@@ -40,7 +40,7 @@ module.exports = function(pb) {
             if (util.isError(err)) {
                 return cb(err);
             }
-
+            pb.log.info('using article.js');
             //create the service
             self.service = new pb.ArticleServiceV2(self.getServiceContext());
 

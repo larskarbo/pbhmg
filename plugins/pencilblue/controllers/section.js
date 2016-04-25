@@ -37,6 +37,8 @@ module.exports = function(pb) {
     SectionViewController.prototype.init = function(context, cb) {
         var self = this;
         var init = function(err) {
+
+          pb.log.info('using section.js');
             //get content settings
             var serviceContext = self.getServiceContext();
             var contentService = new pb.ContentService(serviceContext);

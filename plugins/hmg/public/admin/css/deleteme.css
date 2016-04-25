@@ -1,0 +1,157 @@
+body {
+	font-family: 'Abel', sans-serif;
+}
+
+html,body,#wrapper {
+    height:100%;
+}
+
+#wrapper.site-edit {
+	overflow: hidden;
+}
+
+.welcome {
+	font-size: 45px;
+}
+
+.upcheck {
+	padding:30px;
+}
+
+.visits {
+	text-align: center;
+}
+
+.online {
+	color:#31AA07;
+}
+
+.gallery-img{
+	display: inline-block;
+	margin-bottom: 30px;
+	margin-right: 20px;
+	width: 200px;
+	text-align: center;
+	height:140px;
+	overflow: hidden;
+}
+
+.gallery-img:hover{
+	z-index: 10;
+	opacity: 0.5
+}
+
+table.invoices {
+	margin:15px 0;
+	width: 100%;
+}
+
+table.invoices,.invoices th , .invoices td{
+	border: solid 1px #ACACAC;
+	padding:4px;
+}
+
+td.isunpaid {
+	background: #F58A8A;
+}
+
+td.ispaid {
+	background: #C9FF99;
+}
+
+.logo {
+	color: white;
+	font-size: 23px;
+	margin-top: 16px;
+	margin-bottom: 6px;
+}
+
+
+#adminHeader {
+	background: #5E5E5E;
+	padding: 20px 15px 0s;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index:3;
+}
+
+.adminNav {
+	vertical-align: middle;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.adminNav li {
+	padding:0;
+}
+
+.adminNav a:link,.adminNav a:visited{
+	color: white;
+	text-decoration: none;
+	font-size: 16px;
+	width: 100%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.saveButton {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding:20px;
+	background-color: white;
+	border: solid 1px black;
+	margin:0 8px 8px 0;
+}
+
+.adminNav a:hover {
+	text-decoration: none;
+	background: #7A7A7A;
+}
+
+.adminNav a:active {
+	color:#C4C4C4;
+}
+
+.adminNav li {
+	box-sizing: border-box;
+}
+
+li.current a{
+	color:orange !important;
+}
+
+
+
+#siteIframe{
+	width: 100%;
+	height: 100%;
+}
+
+#site {
+	position: absolute;
+	right: 0px; left: 0px; bottom: 0px; top: 107px;
+}
+
+#logo, #logo:hover {
+}
+
+#logo.flash {
+	animation: flash 3s 1;
+}
+
+@keyframes flash {
+	0% {
+		filter: contrast(0%);
+		-webkit-filter: contrast(0%);
+	}
+	50% {
+		filter: contrast(100%);
+		-webkit-filter: contrast(100%);
+	}
+	100% {
+		filter: contrast(0%);
+		-webkit-filter: contrast(0%);
+	}
+}

@@ -1,0 +1,128 @@
+body {
+  font-family: 'Abel', sans-serif;
+}
+
+h1.hero, .focus {
+  font-family: 'Montaga', sans-serif;
+}
+#index {
+  background: url(/img/to-personer-ski.jpg?w=1920) no-repeat center center /*fixed*/;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/to-personer-ski.jpg?w=1920', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./img/to-personer-ski.jpg?w=1920', sizingMethod='scale');
+
+  height: 450px;
+}
+
+#slider {
+  height: 450px;
+}
+
+#kontaktSlider {
+  height: 360px;
+}
+#ruterSlider {
+  height: 500px;
+}
+
+.row img {
+  width: 100%;
+}
+
+.inFocus{
+  padding:20px 20px 12px;
+}
+
+footer {
+  padding:25px 0 25px;
+  background-color: #2E3852;
+  color:white;
+}
+
+p.focus {
+  text-align: center;
+  padding:0 20%;
+  font-size: 20px;
+}
+
+.fc-scheduler {
+  padding-top: 30px;
+}
+
+.fc-scheduler:first-child {
+  padding-top: 0px;
+}
+
+.textOverImage {
+  text-align: center;
+  color: white;
+  padding-top: 35px;
+  font-size: 45px
+}
+
+
+
+#top {
+  background: center top;
+  height: 300px;
+  padding-right: 0;
+  padding-left: 0;
+  background-image: url(../img/resize/slogen.jpg);
+  background-size: cover;
+}
+
+#folk {
+  background: url(../img/resize/folk.jpg) center center /*fixed*/ #2B7369;
+  background-size: cover;
+  height:400px;
+}
+
+#logo {
+  text-align: center;
+  font-size: 40px;
+}
+
+h1.hero {
+  text-align: center;
+  font-size: 30px;
+  color: black
+}
+
+#header {
+  /*padding-bottom: 15px;*/
+  background-color: #FFFEFD;
+  width: 100%
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#map > img {
+  position: relative;
+
+}
+
+#close {
+  display: none
+}
+
+#maptext {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: 0px;
+  margin-top: -61px;
+  margin-left: -20px;
+  overflow: hidden;
+  height: 100px;
+}
+
+.form-edge {
+  border-radius: 0;
+}

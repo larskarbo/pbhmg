@@ -1,0 +1,36 @@
+^tmp_admin=elements=precontent^
+<div class="admin-container">
+	<h1>^page_name^</h1>
+</div>
+
+<div class="infoBox">
+	<h3>Arrangement</h3>
+</div>
+
+<div class="admin-container">
+
+	<table class="pretty-table">
+		<tr>
+			<th>Namn</th>
+			<th>URL</th>
+			<th>Forfatter</th>
+			<th>Publiseringsdato</th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="a in arr track by a._id">
+			<td><a ng-href="/admin/content/as/{{a._id}}" ng-bind="a.headline"></a></td>
+			<td>✓</td>
+			<td ng-bind="a.url"></td>
+			<td ng-bind="a.author_name"></td>
+			<td ng-bind="a.publish_date | date: 'yyyy-MM-dd'"></td>
+			<td><a href="#" ng-click="confirmDelete($index)"><i class="fa fa-trash"></i></a></td>
+		</tr>
+	</table>
+
+	<script>
+
+	</script>
+</div>
+^tmp_angular=admin=arrangement^
+
+^tmp_admin=elements=postcontent^

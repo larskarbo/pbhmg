@@ -1,0 +1,124 @@
+^tmp_admin=elements=precontent^
+
+<div class="admin-container">
+    <h1>Fakturaer</h1>
+</div>
+<div class="infoBox">
+    <h3>Her er ei oversikt over alle fakturaane</h3>
+</div>
+
+<div class="admin-container">
+    <table class="pretty-table">
+        <tr>
+            <th>Ordrenr.</th>
+            <th>Kunde</th>
+            <th>Tittel</th>
+            <th>Dato (faktura)</th>
+            <th>Dato (tur)</th>
+            <th>Beløp</th>
+            <th>Betalt</th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <tr ng-repeat="f in fakturaer">
+            <td ng-bind="f.id"></td>
+            <td ng-bind="f.name"></td>
+            <td ng-bind="f.title"></td>
+            <td ng-bind="f.date | date: 'yyyy-MM-dd'"></td>
+            <td ng-bind="f.tripDate | date: 'yyyy-MM-dd'"></td>
+            <td ng-bind="f.amount"></td>
+            <td ng-bind="f.paid"></td>
+            <td><a ng-href="/betale/{{f._id}}">link</a></td>
+            <td><a href="#" ng-click="confirmDelete($index)"><i class="fa fa-edit"></i></a></td>
+        </tr>
+    </table>
+</div>
+
+
+<div class="formContent hidden">
+    <div class="invoice-form">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label for="name">Betalast av: </label>
+                </div>
+                <div class="col-xs-8">
+                    <input name="name" placeholder="Ola Nordmann" required>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label for="title">Tittel: </label>
+                </div>
+                <div class="col-xs-8">
+                    <input name="title" placeholder="Tur til slogen" required>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="form-group">
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <label for="description">Beskrivelse: </label>
+                </div>
+                <div class="col-xs-8">
+                    <textarea name="description" placeholder="Guida tur for 4 personar til Slogen" required></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label for="date">Dato (faktura): </label>
+                </div>
+                <div class="col-xs-8">
+                    <input type='text' name="date" class="today date" size="11" required/>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="form-group" style="position:relative">
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <label for="tripDate">Dato (tur): </label>
+                </div>
+                <div class="col-xs-8" style="position:relative">
+                    <input type='text' name="tripDate" class="datetimepicker" size="11" required/>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label for="amount">Beløp: </label>
+                </div>
+                <div class="col-xs-8" style="position:relative">
+                    <input name="amount" placeholder="Beløp i NOK" required>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="event">Legg til event i kalender </label>
+            <input name="event" type="checkbox" checked>
+        </div>
+    </div>
+</div>
+^tmp_angular=admin=fakturaer^
+
+^tmp_admin=elements=postcontent^
+
+
+<script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
+<script src="/public/hmg/js/faktura.js"></script>

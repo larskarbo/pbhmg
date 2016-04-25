@@ -1,0 +1,37 @@
+^tmp_admin=elements=precontent^
+<div class="admin-container">
+	<h1>Sider</h1>
+</div>
+
+<div class="infoBox">
+	<h3>Sider er faste sider på nettsida som viser informasjon</h3>
+</div>
+
+<div class="admin-container">
+
+	<table class="pretty-table">
+		<tr>
+			<th>Namn</th>
+			<th>Status</th>
+			<th>URL</th>
+			<th>Forfatter</th>
+			<th>Publiseringsdato</th>
+			<th></th>
+		</tr>
+		<tr ng-repeat="page in pages track by page._id">
+			<td><a ng-href="/admin/content/pages/{{page._id}}" ng-bind="page.headline"></a></td>
+			<td>✓</td>
+			<td ng-bind="page.url"></td>
+			<td ng-bind="page.author_name"></td>
+			<td ng-bind="page.publish_date | date: 'yyyy-MM-dd'"></td>
+			<td><a href="#" ng-click="confirmDelete($index)"><i class="fa fa-trash"></i></a></td>
+		</tr>
+	</table>
+
+	<script>
+
+	</script>
+</div>
+^tmp_angular=admin=sider^
+
+^tmp_admin=elements=postcontent^

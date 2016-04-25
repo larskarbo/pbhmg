@@ -16,7 +16,7 @@
 */
 
 module.exports = function LoginViewControllerModule(pb) {
-    
+
     //pb dependencies
     var util = pb.util;
 

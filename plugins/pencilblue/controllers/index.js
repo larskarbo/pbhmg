@@ -63,7 +63,8 @@ module.exports = function IndexModule(pb) {
                 articleService.getMetaInfo(data.content[0], function(err, meta) {
                     self.ts.registerLocal('meta_keywords', meta.keywords);
                     self.ts.registerLocal('meta_desc', data.section.description || meta.description);
-                    self.ts.registerLocal('meta_title', data.section.name || meta.title);
+                    self.ts.registerLocal('meta_title', "pencilblue fuck plugin" || data.section.name || meta.title);
+                    self.ts.registerLocal('yolo_cake', "pencilblue fuck plugin" || data.section.name || meta.title);
                     self.ts.registerLocal('meta_thumbnail', meta.thumbnail);
                     self.ts.registerLocal('meta_lang', self.ls.language);
                     self.ts.registerLocal('current_url', self.req.url);

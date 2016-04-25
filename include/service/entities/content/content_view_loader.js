@@ -92,6 +92,7 @@ module.exports = function(pb) {
             }
 
             self.setMetaInfo(data.meta, options);
+            
             self.ts.registerLocal('current_url', self.req.url);
             self.ts.registerLocal('navigation', new pb.TemplateValue(data.nav.navigation, false));
             self.ts.registerLocal('account_buttons', new pb.TemplateValue(data.nav.accountButtons, false));

@@ -19,11 +19,11 @@
 var async = require('async');
 
 module.exports = function AdminIndexControllerModule(pb) {
-    
+
     //pb dependencies
     var util            = pb.util;
     var SecurityService = pb.SecurityService;
-    
+
     /**
      * Interface for the admin dashboard
      * @class AdminIndexController
@@ -67,6 +67,7 @@ module.exports = function AdminIndexControllerModule(pb) {
                 access: self.session.authentication.admin_level,
                 isAdmin: self.session.authentication.admin_level === SecurityService.ACCESS_ADMINISTRATOR
             });
+
             self.setPageName(self.localizationService.get('DASHBOARD'));
             self.ts.registerLocal('angular_objects', new pb.TemplateValue(angularObjects, false));
             self.ts.load('admin/index', function(error, result) {
