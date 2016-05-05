@@ -1,0 +1,28 @@
+^tmp_admin=elements=precontent^
+
+<div class="admin-container">
+    <h1>Fakturaer</h1>
+</div>
+<div class="infoBox">
+    <h3>Here is your beautiful feedback</h3>
+</div>
+
+<div class="admin-container">
+    <table class="pretty-table">
+        <tr>
+            <th>id</th>
+            <th>text</th>
+            <th>Date</th>
+        </tr>
+
+        <tr ng-repeat="f in feedback">
+            <td ng-bind="f.id"></td>
+            <td ng-bind="f.text"></td>
+            <td ng-bind="f.timestamp"></td>
+        </tr>
+    </table>
+</div>
+
+^tmp_angular=feedback^
+
+^tmp_admin=elements=postcontent^

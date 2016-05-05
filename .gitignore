@@ -25,5 +25,6 @@ config.json
 **/dump.rdb
 
 config.js
+mysql.json
 
 npm-debug.log
